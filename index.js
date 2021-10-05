@@ -82,10 +82,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
-
+dogYears(23);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -155,10 +155,64 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = '';
+let randomNumber = Math.floor(Math.random() * 3);
+if(randomNumber === 0){
+  computer = 'rock';
+} else if(randomNumber === 1){
+  computer = 'paper';
+} else if(randomNumber === 2){
+  computer = 'scissors';
+}
 
 function game(user, computer){
-  /*add your code here*/
+  if(user === 'rock'){
+    if(computer === 'paper'){
+      return 'you lose!';
+    }
+  }
+  if(user === 'rock'){
+    if(computer === 'scissors'){
+      return 'you win!';
+    }
+  }
+  if(user === 'rock'){
+    if(computer === 'rock'){
+      return 'it\'s a tie'
+    }
+  }
+  if(user === 'paper'){
+    if(computer === 'scissors'){
+      return 'you lose!';
+    }
+  }
+  if(user === 'paper'){
+    if(computer === 'rock'){
+      return 'you win!';
+    }
+  }
+  if(user === 'paper'){
+    if(computer === 'paper'){
+      return 'it\'s a tie'
+    }
+  }
+  if(user === 'scissors'){
+    if(computer === 'rock'){
+      return 'you lose!';
+    }
+  }
+  if(user === 'scissors'){
+    if(computer === 'paper'){
+      return 'you win!';
+    }
+  }
+  if(user === 'scissors'){
+    if(computer === 'scissors'){
+      return 'it\'s a tie'
+    }
+  }
 }
+game('rock', 'paper');
 
 
 
